@@ -8,29 +8,29 @@ import { ReferencesSection } from './components/ReferencesSection';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
-      <div className="max-w-[1400px] mx-auto p-8">
-        {/* Scientific Poster Container */}
-        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
+      <div className="w-full px-4">
+        {/* Large Format Scientific Poster for Conference */}
+        <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
           {/* Header */}
           <PosterHeader />
           
-          {/* Main Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-8">
+          {/* Main Content - 3 Column Layout for Large Print */}
+       <div className="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6">
             {/* Left Column */}
-            <div className="space-y-6">
+            <div className="flex flex-col gap-6">
               <IntroductionSection />
               <RelatedResearchSection />
             </div>
             
             {/* Middle Column */}
-            <div className="space-y-6">
+            <div className="flex flex-col gap-6">
               <MethodologySection />
-              <ResultsSection />
             </div>
             
             {/* Right Column */}
-            <div className="space-y-6">
+            <div className="flex flex-col gap-6">
+              <ResultsSection />
               <ConclusionSection />
               <ReferencesSection />
             </div>
@@ -38,11 +38,8 @@ export default function App() {
           
           {/* Footer */}
           <div className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white px-8 py-4 text-center">
-            <p className="text-sm">
-              Đại học Cần Thơ - Trường Nông Nghiệp
-            </p>
-            <p className="text-xs mt-1 opacity-80">
-              Địa chỉ: 3/2, Phường Xuân Khánh, Quận Ninh Kiều, TP. Cần Thơ | Email: phongm0325026gstudent@ctu.edu.vn
+            <p className="text-sm font-medium">
+              <strong>Tác giả:</strong> Thái Phong | <strong>Email:</strong> phongm0325026gstudent@ctu.edu.vn | <strong>Đại học Cần Thơ - Trường Nông Nghiệp</strong> | Hội nghị Khoa học Thú y toàn quốc lần thứ 18, tháng 3/2026
             </p>
           </div>
         </div>
